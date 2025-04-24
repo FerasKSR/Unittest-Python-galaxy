@@ -52,10 +52,8 @@ jobs:
         run: pip install tox
       - name: Run tests
         run: tox -e unit-coverage
-        working-directory: 'galaxy root'
       - name: Archive code coverage results
         uses: actions/upload-artifact@v4
         with:
           name: code-coverage-report
-          working-directory: 'galaxy root'
           path: coverage.xml
